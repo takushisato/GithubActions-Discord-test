@@ -12,6 +12,7 @@ jobs:
     steps:
     - name: Discord Message Notify
       uses: appleboy/discord-action@0.0.3
+      run: echo ${{ github.event.pull_request.html_url }}
       with:
         webhook_id: ${{ secrets.WEBHOOK_ID }}
         webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
